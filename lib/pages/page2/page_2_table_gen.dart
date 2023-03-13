@@ -90,7 +90,7 @@ class TableGen2 {
                       verticalAlignment: TableCellVerticalAlignment.top,
                       child: Container(
                         alignment: Alignment.center,
-                        height: 26,
+                        height: 30,
                         child: Text(
                           item.value[i][ii],
                           textAlign: TextAlign.center,
