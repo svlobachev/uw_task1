@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class TableGen2 {
+
   Widget createTableTitle() {
     List<String> leftTitleList = [
       'Date',
@@ -8,7 +9,6 @@ class TableGen2 {
       'net',
       'Source',
     ];
-
     return Table(
       // border: TableBorder.all(),
       columnWidths: const <int, TableColumnWidth>{

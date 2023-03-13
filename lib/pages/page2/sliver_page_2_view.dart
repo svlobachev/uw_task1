@@ -15,6 +15,7 @@ class MySliverPage2 extends StatelessWidget {
               child: Column(
                 children: [
                   tableGen2.createTable(),
+                  tableGen2.createTable(),
                 ],
               ),
             ),
