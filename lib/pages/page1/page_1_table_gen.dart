@@ -11,7 +11,8 @@ class TableGen {
     List<Image> rightColumnList = [
       const Image(
         height: 20,
-        image: AssetImage('assets/img/icon.png',
+        image: AssetImage(
+          'assets/img/icon.png',
         ),
       ),
       const Image(
@@ -26,26 +27,28 @@ class TableGen {
         height: 20,
         image: AssetImage('assets/img/icon.png'),
       ),
-
     ];
     List<TableRow> rows = [];
     for (int i = 0; i < rightColumnList.length; ++i) {
-      rows.add(TableRow(children: [
-        Text(
-          leftColumnList[i],
-          textAlign: TextAlign.start,
-          style: const TextStyle(
-            fontSize: 15,
-            fontWeight: FontWeight.w500,
-          ),
+      rows.add(
+        TableRow(
+          children: [
+            Text(
+              leftColumnList[i],
+              textAlign: TextAlign.start,
+              style: const TextStyle(
+                fontSize: 15,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+            const SizedBox(
+              height: 34,
+              width: 1,
+            ),
+            rightColumnList[i],
+          ],
         ),
-        const SizedBox(
-          height: 34,
-          width: 1,
-        ),
-        rightColumnList[i],
-
-      ]));
+      );
     }
     return Table(
       // border: TableBorder.all(),
@@ -84,29 +87,32 @@ class TableGen {
     ];
     List<TableRow> rows = [];
     for (int i = 0; i < rightColumnList.length; ++i) {
-      rows.add(TableRow(children: [
-        Text(
-          leftColumnList[i],
-          textAlign: TextAlign.end,
-          style: const TextStyle(
-            fontSize: 14,
-            fontWeight: FontWeight.w500,
-          ),
+      rows.add(
+        TableRow(
+          children: [
+            Text(
+              leftColumnList[i],
+              textAlign: TextAlign.end,
+              style: const TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+            const SizedBox(
+              height: 34,
+              width: 1,
+            ),
+            Text(
+              rightColumnList[i],
+              style: TextStyle(
+                fontSize: 15,
+                fontWeight: FontWeight.w800,
+                color: i == 7 ? Colors.green : null,
+              ),
+            ),
+          ],
         ),
-        const SizedBox(
-          height: 34,
-          width: 1,
-
-        ),
-        Text(
-          rightColumnList[i],
-          style: TextStyle(
-            fontSize: 15,
-            fontWeight: FontWeight.w800,
-            color: i == 7 ? Colors.green : null,
-          ),
-        ),
-      ]));
+      );
     }
     return Table(
       // border: TableBorder.all(),

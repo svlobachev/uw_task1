@@ -7,6 +7,7 @@ class MySliverPage2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     TableGen2 tableGen2 = TableGen2();
+    List<Widget> myWidgetsList = tableGen2.createTable();
     return Scaffold(
       body: CustomScrollView(
         slivers: <Widget>[
@@ -14,8 +15,9 @@ class MySliverPage2 extends StatelessWidget {
             child: SizedBox(
               child: Column(
                 children: [
-                  tableGen2.createTable(),
-                  tableGen2.createTable(),
+                  for(int i = 0; i < myWidgetsList.length; i++)
+                    myWidgetsList[i],
+                  // tableGen2.createTable(),
                 ],
               ),
             ),
