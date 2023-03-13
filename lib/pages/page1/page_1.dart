@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:uw_task1/pages/page_1_table_gen.dart';
+import 'package:uw_task1/pages/page1/page_1_table_gen.dart';
 
 class Page1 extends StatelessWidget {
   const Page1({Key? key}) : super(key: key);

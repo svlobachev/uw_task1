@@ -1,6 +1,46 @@
 import 'package:flutter/material.dart';
 
 class TableGen2 {
+  Widget createTableTitle() {
+    List<String> leftTitleList = [
+      'Date',
+      'Username',
+      'net',
+      'Source',
+    ];
+
+    return Table(
+      // border: TableBorder.all(),
+      columnWidths: const <int, TableColumnWidth>{
+        // 0: IntrinsicColumnWidth(),
+        0: FlexColumnWidth(),
+        // 1: FixedColumnWidth(44),
+        1: FlexColumnWidth(),
+        2: FlexColumnWidth(),
+        3: FlexColumnWidth(),
+      },
+      defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+      children: [
+        TableRow(
+          children: [
+            for (int i = 0; i < leftTitleList.length; i++)
+              TableCell(
+                verticalAlignment: TableCellVerticalAlignment.top,
+                child: Text(
+                  leftTitleList[i],
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
+                    fontSize: 13,
+                    fontWeight: FontWeight.w800,
+                  ),
+                ),
+              ),
+          ],
+        ),
+      ],
+    );
+  }
+
   Widget createTable() {
     List<String> leftColumnList = [
       'Regression Session',
@@ -73,7 +113,6 @@ class TableGen2 {
           height: 34,
           width: 1,
         ),
-
         Text(
           rightColumnList[i],
           style: TextStyle(

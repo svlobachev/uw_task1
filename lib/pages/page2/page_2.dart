@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:uw_task1/pages/sliver_page_2_view.dart';
+import 'package:uw_task1/pages/page2/page_2_table_gen.dart';
+import 'package:uw_task1/pages/page2/sliver_page_2_view.dart';
 
 class Page2 extends StatelessWidget {
   const Page2({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-
+    TableGen2 tableGen2 = TableGen2();
     double scrWidth = MediaQuery.of(context).size.width;
     double scrHeight = MediaQuery.of(context).size.height;
     Color darkGreen = const Color(0xff398241);
@@ -136,7 +137,7 @@ class Page2 extends StatelessWidget {
               10.0,
             ),
             padding: const EdgeInsets.fromLTRB(
-              15.0,
+              0.0,
               10.0,
               15.0,
               10.0,
@@ -146,9 +147,23 @@ class Page2 extends StatelessWidget {
 
                 child: Column(
                   children: [
+                    Container(
+                      width: double.infinity,
+                      height: (scrHeight * 0.40) / 18,
+                      decoration: BoxDecoration(
+                        // color: darkGreen,
+                        borderRadius: const BorderRadius.only(
+                          topLeft: Radius.circular(10),
+                          topRight: Radius.circular(10),
+                        ),
+                      ),
+                      child: Center(
+                        child: tableGen2.createTableTitle(),
+                      ),
+                    ),
                        SizedBox(
                         key: UniqueKey(),
-                        height: scrHeight * 0.51,
+                        height: scrHeight * 0.49,
                         child:  MySliverPage2(),
                       ),
                   ],

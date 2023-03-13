@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_framework/responsive_framework.dart';
-import 'package:uw_task1/pages/page_1.dart';
-import 'package:uw_task1/pages/page_2.dart';
+import 'package:uw_task1/pages/page1/page_1.dart';
+import 'package:uw_task1/pages/page2/page_2.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);

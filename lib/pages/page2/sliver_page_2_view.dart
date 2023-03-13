@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:uw_task1/pages/page_2_table_gen.dart';
+import 'package:uw_task1/pages/page2/page_2_table_gen.dart';
 
 class MySliverPage2 extends StatelessWidget {
   const MySliverPage2({super.key});
