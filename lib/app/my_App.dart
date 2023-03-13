@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_framework/responsive_framework.dart';
+import 'package:uw_task1/pages/page_1.dart';
 import 'package:uw_task1/pages/page_2.dart';
 
 class MyApp extends StatelessWidget {
@@ -8,6 +9,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      routes: {
+        '/': (context) => const Page1(),
+        '/stats': (context) => const Page1(),
+        '/details': (context) => const Page2(),
+      },
       builder: (context, child) => ResponsiveWrapper.builder(
           BouncingScrollWrapper.builder(context, child!),
           maxWidth: 1200,
@@ -22,7 +28,7 @@ class MyApp extends StatelessWidget {
           ],
           background: Container(color: const Color(0xFFF5F5F5))),
       debugShowCheckedModeBanner: false,
-      home: const Page2(),
+
     );
   }
 }

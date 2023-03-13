@@ -103,7 +103,9 @@ class Page2 extends StatelessWidget {
                       textStyle: TextStyle(
                           fontSize: (scrHeight * 0.40) / 21,
                           fontWeight: FontWeight.w600)),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/stats');
+                  },
                   child: Text(
                     'Stats',
                     style: TextStyle(
