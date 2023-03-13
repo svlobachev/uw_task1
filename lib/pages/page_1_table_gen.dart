@@ -6,7 +6,7 @@ class TableGen {
       'Activity Check #276',
       'Season 38 Spring Training',
       'Season 38 Spring Primetime Week1',
-      'Season 38 Season Predications ',
+      'Season 38 Season Predications',
     ];
     List<Image> rightColumnList = [
       const Image(
@@ -93,7 +93,7 @@ class TableGen {
             fontWeight: FontWeight.w500,
           ),
         ),
-        Container(
+        const SizedBox(
           height: 34,
           width: 1,
 
