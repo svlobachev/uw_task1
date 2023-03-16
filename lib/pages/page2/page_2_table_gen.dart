@@ -112,7 +112,7 @@ class TableGen2 {
   }
 
   Widget createTableTitle() {
-    List<String> leftTitleList = [
+    List<String> titleList = [
       'Date',
       'Username',
       'net',
@@ -132,11 +132,11 @@ class TableGen2 {
       children: [
         TableRow(
           children: [
-            for (int i = 0; i < leftTitleList.length; i++)
+            for (int i = 0; i < titleList.length; i++)
               TableCell(
                 verticalAlignment: TableCellVerticalAlignment.top,
                 child: Text(
-                  leftTitleList[i],
+                  titleList[i],
                   textAlign: TextAlign.center,
                   style: const TextStyle(
                     fontSize: 13,
